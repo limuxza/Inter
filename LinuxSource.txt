@@ -693,7 +693,13 @@ function Linux.Create(config)
         Parent = SearchFrame,
         CornerRadius = UDim.new(0, 4)
     })
-
+    
+    Linux.Instance("UIStroke", {
+        Parent = SearchFrame,
+        Color = Color3.fromRGB(20, 20, 22),
+        Thickness = 1
+    })
+    
     local SearchIcon = Linux.Instance("ImageLabel", {
         Parent = SearchFrame,
         BackgroundTransparency = 1,
@@ -2047,6 +2053,13 @@ function Linux.Create(config)
                 CornerRadius = UDim.new(0, 4)
             })
             
+            Linux.Instance("UIStroke", {
+                Parent = ValueLabel,
+                Color = Color3.fromRGB(20, 20, 22),
+                Thickness = 1,
+                ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+            })
+            
             local FillBar = Linux.Instance("Frame", {
                 Parent = SliderBar,
                 BackgroundColor3 = Color3.fromRGB(138, 43, 226),
@@ -2297,6 +2310,13 @@ function Linux.Create(config)
             Linux.Instance("UICorner", {
                 Parent = TextBoxFrame,
                 CornerRadius = UDim.new(0, 4)
+            })
+            
+            Linux.Instance("UIStroke", {
+                Parent = TextBoxFrame,
+                Color = Color3.fromRGB(20, 20, 22),
+                Thickness = 1,
+                ApplyStrokeMode = Enum.ApplyStrokeMode.Border
             })
             
             local TextBox = Linux.Instance("TextBox", {
